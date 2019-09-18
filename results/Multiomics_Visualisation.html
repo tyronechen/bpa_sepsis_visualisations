@@ -13181,6 +13181,38 @@ pandas</code></pre>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[1]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<script>
+code_show=true; 
+function code_toggle() {
+ if (code_show){
+ $('div.input').hide();
+ } else {
+ $('div.input').show();
+ }
+ code_show = !code_show
+} 
+$( document ).ready(code_toggle);
+</script>
+The raw code for this IPython notebook is by default hidden for easier reading.
+To toggle on/off the raw code, click <a href="javascript:code_toggle()">here</a>.
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -13229,7 +13261,7 @@ pandas</code></pre>
 <div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">infile_path</span> <span class="o">=</span> <span class="s2">&quot;KEGG_Fisher_Exact_test_all_results_13092019.tsv&quot;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">infile_path</span> <span class="o">=</span> <span class="s2">&quot;../data/KEGG_Fisher_Exact_test_all_results_13092019.tsv&quot;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">infile_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -13443,7 +13475,7 @@ Quantity of KEGG pathways: 174
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># load data</span>
-<span class="n">infile_path</span> <span class="o">=</span> <span class="s2">&quot;KEGG_Fisher_Exact_test_all_results_13092019.tsv&quot;</span>
+<span class="n">infile_path</span> <span class="o">=</span> <span class="s2">&quot;../data/KEGG_Fisher_Exact_test_all_results_13092019.tsv&quot;</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pandas</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">infile_path</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># the Streptococcus pneumoniae strains are not part of this specific study</span>
@@ -13682,84 +13714,84 @@ RNA-Seq Up as one plot
 
 Strains dropped from Metabolomics Down data as they had no KEGG pathway overlap:
                                      0
-0         Klebsiella pneumoniae AJ218
-1        Streptococcus pyogenes PS006
-2       Staphylococcus aureus BPH2760
-3          Klebsiella pneumoniae KPC2
-4                Escherichia coli B36
-5            Escherichia coli MS14386
-6       Staphylococcus aureus BPH2819
-7       Streptococcus pyogenes HKU419
-8       Staphylococcus aureus BPH2900
-9        Streptococcus pyogenes PS003
-10  Klebsiella variicola 04153260899A
-11      Staphylococcus aureus BPH2947
-12      Staphylococcus aureus BPH2986
-13       Streptococcus pyogenes SP444
-14        Streptococcus pyogenes 5448
-15           Escherichia coli MS14387
-16         Klebsiella variicola AJ292
+0          Klebsiella pneumoniae KPC2
+1       Staphylococcus aureus BPH2760
+2        Streptococcus pyogenes SP444
+3         Streptococcus pyogenes 5448
+4       Staphylococcus aureus BPH2947
+5          Klebsiella variicola AJ292
+6       Streptococcus pyogenes HKU419
+7                Escherichia coli B36
+8   Klebsiella variicola 04153260899A
+9        Streptococcus pyogenes PS006
+10           Escherichia coli MS14386
+11      Staphylococcus aureus BPH2900
+12           Escherichia coli MS14387
+13        Klebsiella pneumoniae AJ218
+14       Streptococcus pyogenes PS003
+15      Staphylococcus aureus BPH2819
+16      Staphylococcus aureus BPH2986
 
 Strains dropped from Metabolomics Up data as they had no KEGG pathway overlap:
                                     0
-0        Klebsiella pneumoniae AJ218
-1               Escherichia coli B36
-2         Klebsiella variicola AJ292
-3      Staphylococcus aureus BPH2900
-4         Klebsiella variicola AJ055
-5       Streptococcus pyogenes PS003
+0         Klebsiella pneumoniae KPC2
+1      Staphylococcus aureus BPH2760
+2      Staphylococcus aureus BPH2900
+3         Klebsiella variicola AJ055
+4        Klebsiella pneumoniae AJ218
+5         Klebsiella variicola AJ292
 6   Klebsiella variicola 03-311-0071
-7      Staphylococcus aureus BPH2986
-8       Streptococcus pyogenes PS006
-9      Staphylococcus aureus BPH2760
-10        Klebsiella pneumoniae KPC2
+7       Streptococcus pyogenes PS003
+8               Escherichia coli B36
+9       Streptococcus pyogenes PS006
+10     Staphylococcus aureus BPH2986
 
 Strains dropped from Proteomics Down data as they had no KEGG pathway overlap:
                                 0
-0           Escherichia coli B36
-1       Escherichia coli MS14384
-2       Escherichia coli MS14386
-3  Streptococcus pyogenes HKU419
-4   Streptococcus pyogenes PS003
-5   Streptococcus pyogenes SP444
-6    Streptococcus pyogenes 5448
-7       Escherichia coli MS14387
-8   Streptococcus pyogenes PS006
-9       Escherichia coli MS14385
+0       Escherichia coli MS14387
+1   Streptococcus pyogenes SP444
+2    Streptococcus pyogenes 5448
+3   Streptococcus pyogenes PS003
+4  Streptococcus pyogenes HKU419
+5           Escherichia coli B36
+6       Escherichia coli MS14384
+7   Streptococcus pyogenes PS006
+8       Escherichia coli MS14385
+9       Escherichia coli MS14386
 
 Strains dropped from Proteomics Up data as they had no KEGG pathway overlap:
                                 0
-0           Escherichia coli B36
-1       Escherichia coli MS14384
-2       Escherichia coli MS14386
-3  Streptococcus pyogenes HKU419
-4   Streptococcus pyogenes PS003
-5   Streptococcus pyogenes SP444
-6    Streptococcus pyogenes 5448
-7       Escherichia coli MS14387
-8   Streptococcus pyogenes PS006
-9       Escherichia coli MS14385
+0       Escherichia coli MS14387
+1   Streptococcus pyogenes SP444
+2    Streptococcus pyogenes 5448
+3   Streptococcus pyogenes PS003
+4  Streptococcus pyogenes HKU419
+5           Escherichia coli B36
+6       Escherichia coli MS14384
+7   Streptococcus pyogenes PS006
+8       Escherichia coli MS14385
+9       Escherichia coli MS14386
 
 Strains dropped from RNA-Seq Down data as they had no KEGG pathway overlap:
                                     0
-0        Klebsiella pneumoniae AJ218
-1      Streptococcus pyogenes HKU419
-2         Klebsiella variicola AJ055
-3  Klebsiella variicola 04153260899A
-4       Streptococcus pyogenes SP444
-5        Streptococcus pyogenes 5448
-6           Escherichia coli MS14387
+0         Klebsiella variicola AJ055
+1           Escherichia coli MS14387
+2       Streptococcus pyogenes SP444
+3        Streptococcus pyogenes 5448
+4        Klebsiella pneumoniae AJ218
+5      Streptococcus pyogenes HKU419
+6  Klebsiella variicola 04153260899A
 7           Escherichia coli MS14385
 
 Strains dropped from RNA-Seq Up data as they had no KEGG pathway overlap:
                                 0
-0  Streptococcus pyogenes HKU419
-1  Staphylococcus aureus BPH2900
-2  Staphylococcus aureus BPH2986
-3   Streptococcus pyogenes SP444
-4    Streptococcus pyogenes 5448
-5       Escherichia coli MS14387
-6   Streptococcus pyogenes PS006
+0  Staphylococcus aureus BPH2900
+1       Escherichia coli MS14387
+2   Streptococcus pyogenes SP444
+3    Streptococcus pyogenes 5448
+4  Streptococcus pyogenes HKU419
+5   Streptococcus pyogenes PS006
+6  Staphylococcus aureus BPH2986
 </pre>
 </div>
 </div>
@@ -13896,9 +13928,9 @@ RNA-Seq as one plot
 
 Strains dropped from Metabolomics data as they had no KEGG pathway overlap:
                                 0
-0  Staphylococcus aureus BPH2760
+0  Staphylococcus aureus BPH2986
 1  Staphylococcus aureus BPH2900
-2  Staphylococcus aureus BPH2986
+2  Staphylococcus aureus BPH2760
 
 Strains dropped from Proteomics data as they had no KEGG pathway overlap:
  Empty DataFrame
@@ -14001,9 +14033,9 @@ RNA-Seq Up as one plot
 
 Strains dropped from Metabolomics Up data as they had no KEGG pathway overlap:
                                 0
-0  Staphylococcus aureus BPH2760
+0  Staphylococcus aureus BPH2986
 1  Staphylococcus aureus BPH2900
-2  Staphylococcus aureus BPH2986
+2  Staphylococcus aureus BPH2760
 
 Strains dropped from Proteomics Down data as they had no KEGG pathway overlap:
  Empty DataFrame
@@ -14022,8 +14054,8 @@ Index: []
 
 Strains dropped from RNA-Seq Up data as they had no KEGG pathway overlap:
                                 0
-0  Staphylococcus aureus BPH2900
-1  Staphylococcus aureus BPH2986
+0  Staphylococcus aureus BPH2986
+1  Staphylococcus aureus BPH2900
 </pre>
 </div>
 </div>
@@ -14143,12 +14175,13 @@ Strains dropped from RNA-Seq Up data as they had no KEGG pathway overlap:
     <span class="n">most_intersections_omics</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">extract_pathway_by_intersections</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">quantile</span><span class="p">)))</span>
     
 <span class="c1"># export tsv files of pathways:quantity of intersections across strains</span>
+<span class="n">outfile_path</span> <span class="o">=</span> <span class="s2">&quot;../results/&quot;</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">most_intersections_omics</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S aureus&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;= quantile&quot;</span><span class="p">,</span> <span class="n">quantile</span> <span class="p">,</span><span class="s2">&quot;and above of pathways which overlap across strains:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="s2">&quot;intersections_count&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;S_aureus&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">outfile_path</span> <span class="o">+</span> <span class="s2">&quot;S_aureus&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">most_intersections_omics_direction</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;S aureus&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="s2">&quot;= quantile&quot;</span><span class="p">,</span> <span class="n">quantile</span> <span class="p">,</span><span class="s2">&quot;and above of pathways which overlap across strains:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="s2">&quot;intersections_count&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;S_aureus&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">outfile_path</span> <span class="o">+</span> <span class="s2">&quot;S_aureus&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14284,7 +14317,7 @@ Name: intersections_count, dtype: int64
 <span class="c1"># export tsv files of pathways:quantity of intersections across strains</span>
 <span class="k">for</span> <span class="n">name</span><span class="p">,</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">most_intersections</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;= quantile&quot;</span><span class="p">,</span> <span class="n">quantile</span> <span class="p">,</span><span class="s2">&quot;of pathways which overlap across strains:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">[</span><span class="s2">&quot;intersections_count&quot;</span><span class="p">],</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s2">&quot;All_species&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">path</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">outfile_path</span> <span class="o">+</span> <span class="s2">&quot;All_species&quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)),</span> <span class="s2">&quot;quantile&quot;</span><span class="p">,</span> <span class="nb">str</span><span class="p">(</span><span class="n">quantile</span><span class="p">),</span> <span class="s2">&quot;and_above.csv&quot;</span><span class="p">]),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14631,35 +14664,35 @@ RNA-Seq as one plot
 
 Strains dropped from Metabolomics data as they had no KEGG pathway overlap:
                                 0
-0    Klebsiella pneumoniae AJ218
-1           Escherichia coli B36
-2     Klebsiella variicola AJ292
-3  Staphylococcus aureus BPH2900
-4   Streptococcus pyogenes PS003
-5  Staphylococcus aureus BPH2986
-6   Streptococcus pyogenes PS006
-7  Staphylococcus aureus BPH2760
-8     Klebsiella pneumoniae KPC2
+0     Klebsiella pneumoniae KPC2
+1  Staphylococcus aureus BPH2760
+2  Staphylococcus aureus BPH2900
+3    Klebsiella pneumoniae AJ218
+4     Klebsiella variicola AJ292
+5   Streptococcus pyogenes PS003
+6           Escherichia coli B36
+7   Streptococcus pyogenes PS006
+8  Staphylococcus aureus BPH2986
 
 Strains dropped from Proteomics data as they had no KEGG pathway overlap:
                                 0
-0           Escherichia coli B36
-1       Escherichia coli MS14384
-2       Escherichia coli MS14386
-3  Streptococcus pyogenes HKU419
-4   Streptococcus pyogenes PS003
-5   Streptococcus pyogenes SP444
-6    Streptococcus pyogenes 5448
-7       Escherichia coli MS14387
-8   Streptococcus pyogenes PS006
-9       Escherichia coli MS14385
+0       Escherichia coli MS14387
+1   Streptococcus pyogenes SP444
+2    Streptococcus pyogenes 5448
+3   Streptococcus pyogenes PS003
+4  Streptococcus pyogenes HKU419
+5           Escherichia coli B36
+6       Escherichia coli MS14384
+7   Streptococcus pyogenes PS006
+8       Escherichia coli MS14385
+9       Escherichia coli MS14386
 
 Strains dropped from RNA-Seq data as they had no KEGG pathway overlap:
                                 0
-0    Streptococcus pyogenes 5448
-1       Escherichia coli MS14387
+0   Streptococcus pyogenes SP444
+1    Streptococcus pyogenes 5448
 2  Streptococcus pyogenes HKU419
-3   Streptococcus pyogenes SP444
+3       Escherichia coli MS14387
 </pre>
 </div>
 </div>
@@ -14773,64 +14806,64 @@ RNA-Seq as one plot
 
 Strains dropped from Metabolomics GC-MS data as they had no KEGG pathway overlap:
                                  0
-0     Klebsiella pneumoniae AJ218
-1            Escherichia coli B36
-2   Streptococcus pyogenes HKU419
-3      Klebsiella variicola AJ292
-4    Streptococcus pyogenes PS003
-5   Staphylococcus aureus BPH2947
-6   Staphylococcus aureus BPH2986
-7     Streptococcus pyogenes 5448
-8        Escherichia coli MS14387
-9    Streptococcus pyogenes PS006
-10  Staphylococcus aureus BPH2760
-11     Klebsiella pneumoniae KPC2
+0      Klebsiella pneumoniae KPC2
+1   Staphylococcus aureus BPH2760
+2        Escherichia coli MS14387
+3     Streptococcus pyogenes 5448
+4   Staphylococcus aureus BPH2947
+5      Klebsiella variicola AJ292
+6     Klebsiella pneumoniae AJ218
+7    Streptococcus pyogenes PS003
+8   Streptococcus pyogenes HKU419
+9            Escherichia coli B36
+10   Streptococcus pyogenes PS006
+11  Staphylococcus aureus BPH2986
 
 Strains dropped from Metabolomics LC-MS data as they had no KEGG pathway overlap:
                                     0
-0        Klebsiella pneumoniae AJ218
-1               Escherichia coli B36
-2      Staphylococcus aureus BPH2819
-3         Klebsiella variicola AJ292
-4      Staphylococcus aureus BPH2900
-5         Klebsiella variicola AJ055
-6  Klebsiella variicola 04153260899A
-7   Klebsiella variicola 03-311-0071
-8      Staphylococcus aureus BPH2760
-9         Klebsiella pneumoniae KPC2
+0         Klebsiella pneumoniae KPC2
+1      Staphylococcus aureus BPH2760
+2      Staphylococcus aureus BPH2900
+3         Klebsiella variicola AJ055
+4        Klebsiella pneumoniae AJ218
+5         Klebsiella variicola AJ292
+6   Klebsiella variicola 03-311-0071
+7      Staphylococcus aureus BPH2819
+8               Escherichia coli B36
+9  Klebsiella variicola 04153260899A
 
 Strains dropped from Proteomics MS1 DDA data as they had no KEGG pathway overlap:
                                 0
-0           Escherichia coli B36
-1       Escherichia coli MS14384
-2       Escherichia coli MS14386
-3  Streptococcus pyogenes HKU419
-4   Streptococcus pyogenes PS003
-5   Streptococcus pyogenes SP444
-6    Streptococcus pyogenes 5448
-7       Escherichia coli MS14387
-8   Streptococcus pyogenes PS006
-9       Escherichia coli MS14385
+0       Escherichia coli MS14387
+1   Streptococcus pyogenes SP444
+2    Streptococcus pyogenes 5448
+3   Streptococcus pyogenes PS003
+4  Streptococcus pyogenes HKU419
+5           Escherichia coli B36
+6       Escherichia coli MS14384
+7   Streptococcus pyogenes PS006
+8       Escherichia coli MS14385
+9       Escherichia coli MS14386
 
 Strains dropped from Proteomics MS2 DIA/SWATH data as they had no KEGG pathway overlap:
                                 0
-0           Escherichia coli B36
-1       Escherichia coli MS14384
-2       Escherichia coli MS14386
-3  Streptococcus pyogenes HKU419
-4   Streptococcus pyogenes PS003
-5   Streptococcus pyogenes SP444
-6    Streptococcus pyogenes 5448
-7       Escherichia coli MS14387
-8   Streptococcus pyogenes PS006
-9       Escherichia coli MS14385
+0       Escherichia coli MS14387
+1   Streptococcus pyogenes SP444
+2    Streptococcus pyogenes 5448
+3   Streptococcus pyogenes PS003
+4  Streptococcus pyogenes HKU419
+5           Escherichia coli B36
+6       Escherichia coli MS14384
+7   Streptococcus pyogenes PS006
+8       Escherichia coli MS14385
+9       Escherichia coli MS14386
 
 Strains dropped from RNA-Seq data as they had no KEGG pathway overlap:
                                 0
-0    Streptococcus pyogenes 5448
-1       Escherichia coli MS14387
+0   Streptococcus pyogenes SP444
+1    Streptococcus pyogenes 5448
 2  Streptococcus pyogenes HKU419
-3   Streptococcus pyogenes SP444
+3       Escherichia coli MS14387
 </pre>
 </div>
 </div>
